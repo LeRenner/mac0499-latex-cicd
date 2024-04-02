@@ -2,12 +2,8 @@
 name: 'Build LaTeX'
 description: 'Build LaTeX document'
 inputs:
-  main: 
-    description: 'Main LaTeX file'
-    required: true
-    default: 'main.tex'
   output:
-    description: 'Output directory'
+    description: 'output'
     required: true
     default: 'output'
 runs:

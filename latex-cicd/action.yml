@@ -1,0 +1,18 @@
+# action.yml
+name: 'Build LaTeX'
+description: 'Build LaTeX document'
+inputs:
+  main: 
+    description: 'Main LaTeX file'
+    required: true
+    default: 'main.tex'
+  output:
+    description: 'Output directory'
+    required: true
+    default: 'output'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.main }}
+    - ${{ inputs.output }}

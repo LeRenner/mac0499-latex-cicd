@@ -1,14 +1,5 @@
-# action.yml
 name: 'Build LaTeX'
 description: 'Build LaTeX document'
-inputs:
-  output:
-    description: 'output'
-    required: true
-    default: 'output'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.main }}
-    - ${{ inputs.output }}
